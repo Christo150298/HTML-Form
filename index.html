@@ -9,92 +9,98 @@
     <title>HTML Form</title>
 </head>
 <body>
-    <form class="row g-3 p-5">
+    <form class="row g-3 p-5 needs-validation" novalidate>
       <!--Header-->
       <div class="col-12 bg-light border border-dark-subtle">
         <h1>Payment for Example</h1>
       </div>
+      <div class="col-12 mt-3 bg-danger rounded">
+        <p class="m-2">Some fields are missing</p>
+      </div>
       <!--body-->
       <!--DatosTarjeta-->
-      <div class="col-md-5">
+      <div class="col-md-5 mt-3">
           <label for="tarjeta" class="form-label">Card #</label>
-          <input type="text" class="form-control" id="tarjeta" value="XXXXXXXXXXXXXXXX" required>
+          <input type="text" class="form-control" id="tarjeta" placeholder="XXXXXXXXXXXXXXXX" required>
       </div>
-      <div class="col-md-3">
-          <label for="cvc" class="form-label">cvc #</label>
-          <input type="text" class="form-control" id="cvc" value="000" required>
+      <div class="col-md-3 mt-3">
+          <label for="cvc" class="form-label">CVC #</label>
+          <input type="text" class="form-control" id="cvc" placeholder="0000" required>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 mt-3">
           <label for="importe" class="form-label">Amount</label>
           <div class="input-group has-validation">
             <span class="input-group-text" id="inputGroupPrepend">$</span>
-            <input type="text" class="form-control" id="importe" value="Amount" required>
+            <input type="text" class="form-control" id="importe" placeholder="Amount" required>
           </div>
       </div>
       <!--NombreApellido-->
-      <div class="col-md-6">
+      <div class="col-md-6 mt-2">
           <label for="nombre" class="form-label">First Name</label>
           <input type="text" class="form-control" id="nombre" required>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 mt-2">
           <label for="apellido" class="form-label">Last Name</label>
           <input type="text" class="form-control" id="apellido" required>
       </div>
       <!--Direccion-->
-      <div class="col-md-6">
+      <div class="col-md-6 mt-2">
           <label for="ciudad" class="form-label">City</label>
           <input type="text" class="form-control" id="ciudad" required>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3 mt-2">
           <label for="estado" class="form-label">State</label>
-          <input type="text" class="form-control" id="estado" required>
+          <select class="form-control" id="estado" required>
+            <option selected>Pick A State</option>
+            <option>...</option>
+          </select>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3 mt-2">
           <label for="cp" class="form-label">Postal Code</label>
           <input type="text" class="form-control" id="cp" required>
       </div>
       <!--Pago-->
-      <div class="col-md-6">
+      <div class="col-md-6 mt-2">
         <label form="payment_method"">We accept:</label>
         <div class="d-flex justify-content-start">
-          <div class="p-1 mb-0 bg-secondary text-white">
-           <input type="radio" name="payment_method" value="mastercard">
+          <div class="p-1 mt-1 mb-2 bg-secondary text-white">
+           <input class="ml-2" type="radio" name="payment_method" value="mastercard" required>
            <label for="payment-method">
-            <i class="fa-brands fa-cc-mastercard"></i>
+              <i class="fa-brands fa-cc-mastercard"></i>
            </label>
           </div>
-          <div class="p-1 mb-0 bg-secondary text-white">
-            <input type="radio" name="payment_method" value="mastercard">
+          <div class="p-1 mt-1 mb-2 bg-secondary text-white">
+            <input class="ml-2" type="radio" name="payment_method" value="visa" required>
             <label for="payment-method">
               <i class="fa-brands fa-cc-visa"></i>
             </label>
           </div>
-          <div class="p-1 mb-0 bg-secondary text-white">
-            <input type="radio" name="payment_method" value="mastercard">
+          <div class="p-1 mt-1 mb-2 bg-secondary text-white">
+            <input class="ml-2" type="radio" name="payment_method" value="paypal" required>
             <label for="payment-method">
               <i class="fa-brands fa-cc-paypal"></i>
             </label>
           </div>
-          <div class="p-1 mb-0 bg-secondary text-white">
-            <input type="radio" name="payment_method" value="mastercard">
+          <div class="p-1 mt-1 mb-2 bg-secondary text-white">
+            <input class="ml-2" type="radio" name="payment_method" value="diners-club" required>
             <label for="payment-method">
-              <i class="fa-brands fa-cc-diners-club"></i>
+              <i class="mr-2 fa-brands fa-cc-diners-club"></i>
             </label>
           </div>
         </div>
       </div>
       <!--Message-->
-      <div class="col-md-6">
+      <div class="col-md-6 mt-2">
             <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" rows="3"></textarea>
+            <textarea class="form-control" id="message" rows="3" required></textarea>
             <p>Add any notes here.</p>
       </div>
       <!--footer-->
       <div class="col-12 d-flex justify-content-end bg-light border border-dark-subtle">
-        <div>
+        <div class="mr-1 m-2">
         <button class="btn btn-secondary" type="submit">Cancel</button>
         </div>
-        <div class="col-ms-1">
+        <div class="ml-1 m-2">
         <button class="btn btn-primary" type="submit">Send</button>
         </div>
       </div>
