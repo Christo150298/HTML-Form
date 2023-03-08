@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/c8493dd80a.js" crossorigin="anonymous"></script>
     <title>HTML Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <form class="row g-3 p-5 needs-validation" novalidate>
@@ -14,18 +15,18 @@
       <div class="col-12 bg-light border border-dark-subtle">
         <h1>Payment for Example</h1>
       </div>
-      <div class="col-12 mt-3 bg-danger rounded">
-        <p class="m-2">Some fields are missing</p>
+      <div class="alerta col-12 mt-3 rounded">
+        <p class="m-2 text-danger">Some fields are missing</p>
       </div>
       <!--body-->
       <!--DatosTarjeta-->
       <div class="col-md-5 mt-3">
           <label for="tarjeta" class="form-label">Card #</label>
-          <input type="text" class="form-control" id="tarjeta" placeholder="XXXXXXXXXXXXXXXX" required>
+          <input maxlength="16" type="text" class="form-control" id="tarjeta" placeholder="XXXXXXXXXXXXXXXX" required>
       </div>
       <div class="col-md-3 mt-3">
           <label for="cvc" class="form-label">CVC #</label>
-          <input type="text" class="form-control" id="cvc" placeholder="0000" required>
+          <input maxlength="4" type="text" class="form-control" id="cvc" placeholder="0000" required>
       </div>
       <div class="col-md-4 mt-3">
           <label for="importe" class="form-label">Amount</label>
@@ -52,12 +53,24 @@
           <label for="estado" class="form-label">State</label>
           <select class="form-control" id="estado" required>
             <option selected>Pick A State</option>
-            <option>...</option>
+            <option>Alava</option>
+            <option>Almeria</option>
+            <option>Badajoz</option>
+            <option>Barcelona</option>
+            <option>Cáceres</option>
+            <option>Cádiz</option>
+            <option>Cantabria</option>
+            <option>La Coruña</option>
+            <option>La Rioja</option>
+            <option>Las Palmas</option>
+            <option>Madrid</option>
+            <option>Malaga</option>
+            <option>Navarra</option>
           </select>
       </div>
       <div class="col-md-3 mt-2">
           <label for="cp" class="form-label">Postal Code</label>
-          <input type="text" class="form-control" id="cp" required>
+          <input maxlength="5" type="text" class="form-control" id="cp" required>
       </div>
       <!--Pago-->
       <div class="col-md-6 mt-2">
